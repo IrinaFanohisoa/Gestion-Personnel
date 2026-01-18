@@ -25,3 +25,4 @@ SELECT ep.id_employe, nom_employe, prenom_employe, COUNT(c.id_conge) AS "Les emp
 SELECT ep.id_employe,nom_employe,prenom_employe, COUNT(c.id_conge) FROM employe ep INNER JOIN conge c ON ep.id_employe = c.id_employe GROUP BY ep.id_employe,nom_employe,prenom_employe HAVING COUNT(c.id_conge)>=2;
 3
 SELECT eq.id_equipe, nom_equipe, AVG(salaire) FROM equipe eq INNER JOIN employe emp ON eq.id_equipe = emp.id_equipe GROUP BY eq.id_equipe, nom_equipe HAVING AVG(salaire) > 1000000;
+SELECT* FROM conge;
